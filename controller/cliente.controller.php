@@ -37,6 +37,7 @@ class ClienteController{
         $alm->Telefono = $_REQUEST['Telefono'];
         $alm->Estatus = $_REQUEST['Estatus'];
         $alm->Domicilio = $_REQUEST['Domicilio'];
+        $alm->FechaAlta = $_REQUEST['FechaAlta'];
 
         $alm->id > 0 
             ? $this->model->Actualizar($alm)
