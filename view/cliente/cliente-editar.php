@@ -43,7 +43,7 @@
 
     <div class="form-group">
         <label>Fecha de alta</label>
-        <input readonly type="text" name="FechaAlta" value="<?php echo $alm->FechaAlta; ?>" class="form-control datepicker" placeholder="Ingrese fecha de alta" data-validacion-tipo="requerido" />
+        <input type="text" name="FechaAlta" value="<?php echo $alm->FechaAlta; ?>" class="form-control datepicker" placeholder="Ingrese fecha de alta" data-validacion-tipo="requerido" />
     </div>
     
     <hr />
