@@ -1,7 +1,7 @@
 <h1 class="page-header">Clientes</h1>
 
 <div class="well well-sm text-right">
-    <a class="btn btn-primary" href="?c=Cliente&a=Crud">Nuevo Cliente</a>
+    <a class="btn btn-primary" href="?c=Cliente&a=Crud">Agregar Cliente</a>
 </div>
 
 <table class="table table-striped">

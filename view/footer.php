@@ -2,7 +2,7 @@
                 <div class="col-xs-12">
                     <hr />
                     <footer class="text-center well">
-                        <p>vNova Internet<a href="http://vnovainternet.ihuan.com.mx/Tickets">Tickets</a></p>
+                        <p>vNova Internet  <a href="http://vnovainternet.ihuan.com.mx/Tickets">Tickets</a></p>
                     </footer>                
                 </div>    
             </div>

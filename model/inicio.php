@@ -1,16 +1,17 @@
 <?php
-class Cliente
+class Inicio
 {
 	private $pdo;
     
     public $id;
-    public $Nombre;
-    public $ApellidoP;
-    public $ApellidoM;
-    public $Telefono;
-    public $Estatus;
-    public $Domicilio;
-	public $FechaAlta;
+    public $Title;
+    public $Text;
+    public $Img;
+    public $TimeInit;
+    public $TimeComplete;
+    public $Partner;
+    public $Priority;
+	public $Status;
 
 	public function __CONSTRUCT()
 	{
@@ -24,13 +25,13 @@ class Cliente
 		}
 	}
 
-	public function Listar()
+	/*public function Listar()
 	{
 		try
 		{
 			$result = array();
 
-			$stm = $this->pdo->prepare("SELECT * FROM clientes");
+			$stm = $this->pdo->prepare("SELECT * FROM notes");
 			$stm->execute();
 
 			return $stm->fetchAll(PDO::FETCH_OBJ);
@@ -40,22 +41,6 @@ class Cliente
 			die($e->getMessage());
 		}
 	}
-	public function ListarClientes()
-    {
-        try
-        {
-            $result =array();
-
-            $stm = $this->pdo->prepare("SELECT id, Nombre, ApellidoP, ApellidoM FROM clientes");
-            $stm->execute();
-
-            return $stm->fetchAll(PDO::FETCH_OBJ);
-        }
-        catch(Exception $e)
-        {
-            die($e->getMessage());
-        }
-    }
 
 	public function Obtener($id)
 	{
@@ -144,4 +129,5 @@ class Cliente
 			die($e->getMessage());
 		}
 	}
+    */
 }

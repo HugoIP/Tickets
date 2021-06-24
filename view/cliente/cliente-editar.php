@@ -55,7 +55,7 @@
 
 <script>
     $(document).ready(function(){
-        $("#frm-alumno").submit(function(){
+        $("#frm-cliente").submit(function(){
             return $(this).validate();
         });
     })
