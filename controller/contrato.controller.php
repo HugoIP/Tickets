@@ -38,27 +38,34 @@ class ContratoController{
     }
     
     public function Guardar(){
+        $cli = new Cliente();
+        $cliTemp = $this->clienteModel->Obtener($_REQUEST['idCliente']);
+        $ser = new Servicio();
+        $serTemp = $this->servicioModel->Obtener($_REQUEST['idServicio']);
+
         $alm = new Contrato();
         
         $alm->id = $_REQUEST['id'];
-        $alm->Nombre = $_REQUEST['Nombre'];
-        $alm->Descripcion = $_REQUEST['Descripcion'];
-        $alm->Costo = $_REQUEST['Costo'];
-        $alm->Periodo = $_REQUEST['Periodo'];
-        $alm->UnidadPeriodo = $_REQUEST['UnidadPeriodo'];
-        $alm->FechaAlta = $_REQUEST['FechaAlta'];
-        $alm->FechaLimit = $_REQUEST['FechaLimit'];
+        $alm->idCliente = $cliTemp->id;
+        $alm->idServicio = $serTemp->id;
+        $alm->ListDispositivos =  trim($_REQUEST['ListDispositivos']);
+        $alm->NombreCliente = ($cliTemp->Nombre.' '.$cliTemp->ApellidoP.' '.$cliTemp->ApellidoM);
+        $alm->NombreServicio = $serTemp->Nombre;
+        $alm->CostoServicio = $serTemp->Costo;;
+        $alm->FechaInicioServicio = $_REQUEST['FechaInicioServicio'];
+        $alm->FechaCorteServicio = $_REQUEST['FechaCorteServicio'];
+        $alm->Modalidad = $_REQUEST['Modalidad'];
         $alm->Estatus = $_REQUEST['Estatus'];
 
         $alm->id > 0 
             ? $this->model->Actualizar($alm)
             : $this->model->Registrar($alm);
         
-        header('Location: index.php');
+        header('Location: index.php?c=contrato');
     }
     
     public function Eliminar(){
         $this->model->Eliminar($_REQUEST['id']);
-        header('Location: index.php');
+        header('Location: index.php?c=contrato');
     }
 }

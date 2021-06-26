@@ -14,6 +14,7 @@ class Contrato
     public $CostoServicio;
     public $FechaInicioServicio;
     public $FechaCorteServicio;
+    public $Modalidad;
     //list dispositivos
 
     /* Missing datos de facturacion */
@@ -84,7 +85,8 @@ class Contrato
 						NombreServicio        = ?,
                         CostoServicio   = ?, 
 						FechaInicioServicio       = ?,
-                        FechaCorteServicio     = ?
+                        FechaCorteServicio     = ?,
+                        Modalidad     = ?
 				    WHERE id = ?";
 
 			$this->pdo->prepare($sql)
@@ -97,6 +99,7 @@ class Contrato
                         $data->CostoServicio,
                         $data->FechaInicioServicio,
                         $data->FechaCorteServicio,
+                        $data->Modalidad,
                         $data->id
 					)
 				);
@@ -110,21 +113,22 @@ class Contrato
 		try 
 		{
 		
-        $sql = "INSERT INTO contratos (idCliente,idServicio,listDispositivos,Estatus,NombreCliente,NombreServicio,CostoServicio,FechaInicioServicio,FechaCorteServicio) 
-		        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO contratos (idCliente,idServicio,ListDispositivos,NombreCliente,NombreServicio,CostoServicio,FechaInicioServicio,FechaCorteServicio,Modalidad,Estatus) 
+		        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                 
 		$this->pdo->prepare($sql)
 		     ->execute(
 				array(
                     $data->idCliente,
                     $data->idServicio, 
-                    $data->listDispositivos, 
-                    $data->Estatus,
+                    $data->ListDispositivos, 
                     $data->NombreCliente,
                     $data->NombreServicio,
                     $data->CostoServicio,
                     $data->FechaInicioServicio,
-                    $data->FechaCorteServico
+                    $data->FechaCorteServicio,
+                    $data->Modalidad,
+                    $data->Estatus
                 )
 			);
 		} catch (Exception $e) 

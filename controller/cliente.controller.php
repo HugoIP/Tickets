@@ -43,11 +43,11 @@ class ClienteController{
             ? $this->model->Actualizar($alm)
             : $this->model->Registrar($alm);
         
-        header('Location: index.php');
+        header('Location: index.php?c=cliente');
     }
     
     public function Eliminar(){
         $this->model->Eliminar($_REQUEST['id']);
-        header('Location: index.php');
+        header('Location: index.php?c=cliente');
     }
 }

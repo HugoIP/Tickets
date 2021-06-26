@@ -12,6 +12,7 @@
             <th>Costo</th>
             <th style="width:120px;">Fecha de inicio</th>
             <th style="width:120px;">Fecha de corte</th>
+            <th style="width:180px;">Modalidad</th>
             <th style="width:180px;">Dispositivos</th>
             <th style="width:180px;">Estatus</th>
             <th style="width:60px;"></th>
@@ -25,7 +26,15 @@
             <td><?php echo $r->CostoServicio; ?></td>
             <td><?php echo $r->FechaInicioServicio; ?></td>
             <td><?php echo $r->FechaCorteServicio;  ?></td>
-            <td><?php echo $r->ListaDispositivos; ?></td>
+            <td><?php  if($r->Modalidad == 1){
+                             echo('Postpago'); 
+                         }
+                        if($r->Modalidad == 2){
+                            echo('Prepago');
+                        }
+                             
+                             ?></td>
+            <td><?php echo $r->ListDispositivos; ?></td>
             <td><?php echo $r->Estatus == 1 ? 'Activo' : 'Inactivo'; ?></td>
             <td>
                 <a href="?c=Contrato&a=Crud&id=<?php echo $r->id; ?>">Editar</a>
