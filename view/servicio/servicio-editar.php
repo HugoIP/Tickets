@@ -12,12 +12,12 @@
     
     <div class="form-group">
         <label>Nombre</label>
-        <input type="text" name="Nombre" value="<?php echo $alm->Nombre; ?>" class="form-control" placeholder="Ingrese nombre" data-validacion-tipo="requerido|min:10" />
+        <input type="text" name="Nombre" value="<?php echo $alm->Nombre; ?>" class="form-control" placeholder="Ingrese nombre" data-validacion-tipo="requerido|min:2" />
     </div>
     
     <div class="form-group">
         <label>Descripcion del servicio</label>
-        <input type="text" name="Descripcion" value="<?php echo $alm->Descripcion; ?>" class="form-control" placeholder="Ingrese descripcion del servicio" data-validacion-tipo="requerido|min:10" />
+        <input type="text" name="Descripcion" value="<?php echo $alm->Descripcion; ?>" class="form-control" placeholder="Ingrese descripcion del servicio" data-validacion-tipo="requerido|min:2" />
     </div>
     
     <div class="form-group">

@@ -12,21 +12,21 @@
     
     <div class="form-group">
         <label>Nombre</label>
-        <input type="text" name="Nombre" value="<?php echo $alm->Nombre; ?>" class="form-control" placeholder="Ingrese su nombre" data-validacion-tipo="requerido|min:10" />
+        <input type="text" name="Nombre" value="<?php echo $alm->Nombre; ?>" class="form-control" placeholder="Ingrese su nombre" data-validacion-tipo="requerido|min:2" />
     </div>
     
     <div class="form-group">
         <label>Apellido Paterno</label>
-        <input type="text" name="ApellidoP" value="<?php echo $alm->ApellidoP; ?>" class="form-control" placeholder="Ingrese su apellido paterno" data-validacion-tipo="requerido|min:10" />
+        <input type="text" name="ApellidoP" value="<?php echo $alm->ApellidoP; ?>" class="form-control" placeholder="Ingrese su apellido paterno" data-validacion-tipo="requerido|min:2" />
     </div>
     
     <div class="form-group">
         <label>Apellido Materno</label>
-        <input type="text" name="ApellidoM" value="<?php echo $alm->ApellidoM; ?>" class="form-control" placeholder="Ingrese su apellido materno" data-validacion-tipo="requerido|min:10" />
+        <input type="text" name="ApellidoM" value="<?php echo $alm->ApellidoM; ?>" class="form-control" placeholder="Ingrese su apellido materno" data-validacion-tipo="requerido|min:2" />
     </div>
     <div class="form-group">
         <label>Telefono</label>
-        <input type="text" name="Telefono" value="<?php echo $alm->Telefono; ?>" class="form-control" placeholder="Ingrese numero de contacto" data-validacion-tipo="requerido|min:10" />
+        <input type="text" name="Telefono" value="<?php echo $alm->Telefono; ?>" class="form-control" placeholder="Ingrese numero de contacto" data-validacion-tipo="requerido|min:2" />
     </div>
     <div class="form-group">
         <label>Estatus</label>
